@@ -1,11 +1,11 @@
 Summary:	MATE terminal
 Name:		mate-terminal
-Version:	1.2.1
+Version:	1.4.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
 URL:		http://mate-desktop.org
-Source0:	http://pub.mate-desktop.org/releases/1.2/%{name}-%{version}.tar.xz
+Source0:	http://pub.mate-desktop.org/releases/1.4/%{name}-%{version}.tar.xz
 
 BuildRequires:	docbook-dtd412-xml
 BuildRequires:	intltool
@@ -55,4 +55,11 @@ fi
 %{_datadir}/mate-terminal
 # mate help files
 %{_datadir}/mate/help
+
+
+
+%changelog
+* Tue Jun 05 2012 Matthew Dawkins <mattydaw@mandriva.org> 1.2.1-1
++ Revision: 802535
+- imported package mate-terminal
 
