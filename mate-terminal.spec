@@ -2,7 +2,7 @@
 
 Summary:	MATE terminal
 Name:		mate-terminal
-Version:	1.8.0
+Version:	1.8.1
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
@@ -28,7 +28,7 @@ This is the MATE terminal emulator application.
 NOCONFIGURE=yes ./autogen.sh
 
 %build
-%configure2_5x
+%configure
 
 %make
 
