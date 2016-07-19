@@ -2,8 +2,8 @@
 
 Summary:	MATE terminal
 Name:		mate-terminal
-Version:	1.8.1
-Release:	2
+Version:	1.14.0
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
 Url:		http://mate-desktop.org
@@ -13,10 +13,10 @@ BuildRequires:	mate-common
 BuildRequires:	yelp-tools
 BuildRequires:	pkgconfig(dconf)
 BuildRequires:	pkgconfig(glib-2.0)
-BuildRequires:	pkgconfig(gtk+-2.0)
+BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(ice)
 BuildRequires:	pkgconfig(sm)
-BuildRequires:	pkgconfig(vte)
+BuildRequires:	pkgconfig(vte-2.91)
 BuildRequires:	pkgconfig(x11)
 
 %description
@@ -28,7 +28,7 @@ This is the MATE terminal emulator application.
 NOCONFIGURE=yes ./autogen.sh
 
 %build
-%configure
+%configure --with-gtk=3.0
 
 %make
 
@@ -48,5 +48,6 @@ fi
 %{_datadir}/applications/*
 %{_datadir}/glib-2.0/schemas/org.mate.terminal.gschema.xml
 %{_datadir}/mate-terminal
+%{_datadir}/appdata/%{name}.appdata.xml
 %{_mandir}/man1/mate-terminal.1*
 
