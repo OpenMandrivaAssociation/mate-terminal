@@ -2,9 +2,9 @@
 
 Summary:	MATE terminal
 Name:		mate-terminal
-Version:	1.14.0
+Version:	1.18.1
 Release:	1
-License:	GPLv2+
+License:	GPLv3+
 Group:		Graphical desktop/GNOME
 Url:		http://mate-desktop.org
 Source0:	http://pub.mate-desktop.org/releases/%{url_ver}/%{name}-%{version}.tar.xz
@@ -26,25 +26,26 @@ This is the MATE terminal emulator application.
 %prep
 %setup -q
 %apply_patches
-NOCONFIGURE=yes ./autogen.sh
 
 %build
-%configure --with-gtk=3.0
-
+#NOCONFIGURE=yes ./autogen.sh
+%configure
 %make
 
 %install
 %makeinstall_std
 
+# locales
 %find_lang %{name} --with-gnome --all-name
 
 %post
+#FIXME: error: %post(mate-terminal-1.18.1-1.x86_64) scriptlet failed, exit status 2
 if [ "$1" = "2" ]; then
 	update-alternatives --remove xvt %{_bindir}/mate-terminal
 fi
 
 %files -f %{name}.lang
-%doc AUTHORS README NEWS HACKING
+%doc AUTHORS README NEWS ChangeLog README
 %{_bindir}/*
 %{_datadir}/applications/*
 %{_datadir}/glib-2.0/schemas/org.mate.terminal.gschema.xml
