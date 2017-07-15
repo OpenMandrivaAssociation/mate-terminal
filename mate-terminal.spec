@@ -13,8 +13,8 @@ Source0:	https://pub.mate-desktop.org/releases/%{url_ver}/%{name}-%{version}.tar
 
 BuildRequires:	desktop-file-utils
 BuildRequires:	intltool
+BuildRequires:	libxml2-utils
 BuildRequires:	mate-common
-BuildRequires:	yelp-tools
 BuildRequires:	pkgconfig(dconf)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gthread-2.0)
@@ -24,7 +24,7 @@ BuildRequires:	pkgconfig(mate-desktop-2.0)
 BuildRequires:	pkgconfig(sm)
 BuildRequires:	pkgconfig(vte-2.91)
 BuildRequires:	pkgconfig(x11)
-BuildRequires:	xmllint
+BuildRequires:	yelp-tools
 
 %description
 The MATE Desktop Environment is the continuation of GNOME 2. It provides an
