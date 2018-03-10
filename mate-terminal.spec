@@ -1,10 +1,10 @@
-#FIXME: fir colours.
+#FIXME: fix colours.
 
 %define url_ver %(echo %{version}|cut -d. -f1,2)
 
 Summary:	MATE terminal
 Name:		mate-terminal
-Version:	1.18.1
+Version:	1.18.2
 Release:	1
 License:	GPLv3+
 Group:		Graphical desktop/Other
@@ -70,3 +70,4 @@ terminal emulation ("stuff in the middle") comes from the VTE widget.
 
 %check
 desktop-file-validate %{buildroot}%{_datadir}/applications/%{name}.desktop
+
