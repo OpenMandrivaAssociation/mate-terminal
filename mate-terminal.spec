@@ -4,7 +4,7 @@
 
 Summary:	MATE terminal
 Name:		mate-terminal
-Version:	1.20.0
+Version:	1.20.2
 Release:	1
 License:	GPLv3+
 Group:		Graphical desktop/Other
@@ -53,17 +53,17 @@ terminal emulation ("stuff in the middle") comes from the VTE widget.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 
 %build
 #NOCONFIGURE=yes ./autogen.sh
 %configure \
 	--disable-schemas-compile \
 	%{nil}
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 # locales
 %find_lang %{name} --with-gnome --all-name
