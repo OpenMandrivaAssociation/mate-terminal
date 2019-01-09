@@ -1,5 +1,6 @@
 removed_sources:
   mate-terminal-1.14.0.tar.xz: a1b998334ac48147997ac0b596c40e4760edecf1
   mate-terminal-1.18.1.tar.xz: cf0ba10d1d3942672e08180469b7aa2367c315cb
-sources:
   mate-terminal-1.18.2.tar.xz: d3bdd6b70aa195f7caffa594cfe1353037885737
+sources:
+  mate-terminal-1.18.3.tar.xz: fa74d964137a8b6ce1d4f6ab1378ad6bf0f2f413
