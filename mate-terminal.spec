@@ -44,9 +44,7 @@ terminal emulation ("stuff in the middle") comes from the VTE widget.
 %{_bindir}/mate-terminal.wrapper
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/glib-2.0/schemas/org.mate.terminal.gschema.xml
-%dir %{_datadir}/mate-terminal
-%{_datadir}/mate-terminal/*
-%{_datadir}/appdata/%{name}.appdata.xml
+%{_datadir}/metainfo/%{name}.appdata.xml
 %{_mandir}/man1/mate-terminal.1*
 
 #---------------------------------------------------------------------------
