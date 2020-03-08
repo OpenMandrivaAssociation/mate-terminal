@@ -1,8 +1,2 @@
-removed_sources:
-  mate-terminal-1.14.0.tar.xz: a1b998334ac48147997ac0b596c40e4760edecf1
-  mate-terminal-1.18.1.tar.xz: cf0ba10d1d3942672e08180469b7aa2367c315cb
-  mate-terminal-1.18.2.tar.xz: d3bdd6b70aa195f7caffa594cfe1353037885737
-  mate-terminal-1.20.0.tar.xz: 1217072acd69b949cb559d0886a70ce178d06e57
-  mate-terminal-1.20.2.tar.xz: e4c0379bd19170196909d8e95dd0b4a4d052a4c1
 sources:
-  mate-terminal-1.22.1.tar.xz: 52218ea2066fb813c351b6e1b8b22787665d177a
+  mate-terminal-1.24.0.tar.xz: 1d9c6dadd385f47029fecd54c46c866bbd9ea38e
