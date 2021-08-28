@@ -4,7 +4,7 @@
 
 Summary:	MATE terminal
 Name:		mate-terminal
-Version:	1.24.1
+Version:	1.26.0
 Release:	1
 License:	GPLv3+
 Group:		Graphical desktop/Other
