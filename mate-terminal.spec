@@ -41,19 +41,18 @@ terminal emulator application is only the shell (menubar, prefs dialog); the
 terminal emulation ("stuff in the middle") comes from the VTE widget.
 
 %files -f %{name}.lang
-%doc AUTHORS README NEWS ChangeLog README
+%doc AUTHORS README NEWS ChangeLog
 %{_bindir}/mate-terminal
 %{_bindir}/mate-terminal.wrapper
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/glib-2.0/schemas/org.mate.terminal.gschema.xml
 %{_datadir}/metainfo/%{name}.appdata.xml
-%{_mandir}/man1/mate-terminal.1*
+%doc %{_mandir}/man1/mate-terminal.1*
 
 #---------------------------------------------------------------------------
 
 %prep
-%setup -q
-%autopatch -p1
+%autosetup -p1
 
 %build
 #NOCONFIGURE=yes ./autogen.sh
