@@ -1,15 +1,13 @@
-#FIXME: fix colours.
-
-%define url_ver %(echo %{version}|cut -d. -f1,2)
+%define mate_ver	%(echo %{version}|cut -d. -f1,2)
 
 Summary:	MATE terminal
 Name:		mate-terminal
-Version:	1.26.1
+Version:	1.28.0
 Release:	1
 License:	GPLv3+
 Group:		Graphical desktop/Other
 Url:		https://mate-desktop.org
-Source0:	https://pub.mate-desktop.org/releases/%{url_ver}/%{name}-%{version}.tar.xz
+Source0:	https://pub.mate-desktop.org/releases/%{mate_ver}/%{name}-%{version}.tar.xz
 
 BuildRequires:	autoconf-archive
 BuildRequires:	desktop-file-utils
@@ -22,7 +20,7 @@ BuildRequires:	pkgconfig(gthread-2.0)
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(ice)
 BuildRequires:	pkgconfig(mate-desktop-2.0)
-BuildRequires:  pkgconfig(libpcre2-posix)
+BuildRequires:	pkgconfig(libpcre2-posix)
 BuildRequires:	pkgconfig(sm)
 BuildRequires:	pkgconfig(vte-2.91)
 BuildRequires:	pkgconfig(x11)
