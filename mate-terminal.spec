@@ -2,16 +2,16 @@
 
 Summary:	MATE terminal
 Name:		mate-terminal
-Version:	1.28.1
+Version:	1.28.3
 Release:	1
 License:	GPLv3+
 Group:		Graphical desktop/Other
 Url:		https://mate-desktop.org
-Source0:	https://pub.mate-desktop.org/releases/%{mate_ver}/%{name}-%{version}.tar.xz
+#Source0:	https://pub.mate-desktop.org/releases/%{mate_ver}/%{name}-%{version}.tar.xz
+# Use for now tarball from GitHub because from few months sources at mate-desktop.org was not updated.
+Source0:	https://github.com/mate-desktop/mate-terminal/releases/download/v%{version}/mate-terminal-%{version}.tar.xz
 
-BuildRequires:	automake
-BuildRequires:	libtool-base
-BuildRequires:	slibtool
+BuildRequires:	meson
 BuildRequires:	make
 BuildRequires:	autoconf-archive
 BuildRequires:	desktop-file-utils
@@ -57,14 +57,13 @@ terminal emulation ("stuff in the middle") comes from the VTE widget.
 %autosetup -p1
 
 %build
-#NOCONFIGURE=yes ./autogen.sh
-%configure \
-	--disable-schemas-compile \
-	%{nil}
-%make_build
+%meson	\
+	-Dskey=true \
+	-Dsm=true
+%meson_build
 
 %install
-%make_install
+%meson_install
 
 # locales
 %find_lang %{name} --with-gnome --all-name
