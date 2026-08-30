@@ -59,7 +59,7 @@ terminal emulation ("stuff in the middle") comes from the VTE widget.
 %build
 %meson	\
 	-Dskey=true \
-	-Dsm=true
+	-Dsm=false
 %meson_build
 
 %install
